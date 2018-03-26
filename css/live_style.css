@@ -1,0 +1,98 @@
+/*Textboxes on the map, white, transparent leaflet/osm style*/
+.infoBox {
+    line-height: 18px;
+    color: black;
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+
+    position: absolute;
+
+    z-index: 1000;
+}
+
+/*styles the navigation bar at the top*/
+.navbar {
+  margin-bottom: 0px !important;
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+
+.info {
+  left: 10px;
+  bottom: 10px;
+  height: 160px;
+  width: 300px;
+  bockground-color: none;
+}
+
+.plot {
+  font-color: black;
+  right: 10px;
+  bottom: 10px;
+  height: 510px;
+  width: 420px;
+}
+
+
+
+/*Style for the tabs in the analytics div*/
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    /* background-color: #ffffff; */
+    position: absolute;
+    bottom: 5px;
+    width: 90%;
+    font-weight: bold;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: LightSteelBlue;
+    float: left;
+    border: 1px solid LightSteelBlue;
+    border-radius: 5px;
+    /* outline-width: thick; */
+    cursor: pointer;
+    /* padding: 14px; */
+    /* margin: : 10px; */
+    /* transition: 0.3s; */
+    font-size: 14px;
+    width: 50%;
+    /* 100 / number of tabs */
+    height: 20px;
+}
+/* style for the tab blinks (buttons) */
+.tablinks {
+  border: 1px solid #ccc;
+  /* margin: : 50px; */
+  /* height: 60px; */
+
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: inherit;
+    border: none;
+    /* border-top: : #ffb266; */
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px
+    border: 1px solid #ccc;
+    border-top: none;
+
+}

@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "result": "0",
+      "string": "No building",
+      "color": "#fff"
+    },
+    {
+      "result": "1",
+      "string": "Yes",
+      "color": "#10cc10"
+    },
+    {
+      "result": "2",
+      "string": "Maybe",
+      "color": "yellow"
+    },
+    {
+      "result": "3",
+      "string": "Bad Imagery",
+      "color": "red"
+    }
+  ],
+  "mapOptions": {
+    "dataPath": "data/live.geojson",
+    "fullscreenControl": true,
+    "transitionTime": 5000,
+    "autoPlay": true,
+    "timeSlider": false,
+    "speedSlider": false,
+    "defaultControl": true
+  }
+}
