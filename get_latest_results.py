@@ -12,7 +12,7 @@ sys.path.insert(0, './cfg/')
 
 import math
 import logging
-from auth import mysqlDB
+from auth import mapswipe_psqlDB
 from auth import firebase_admin_auth
 import ogr
 import osr
@@ -106,18 +106,18 @@ def geometry_from_tile_coords(TileX, TileY, TileZ):
 
 def get_results_from_mysql(count):
     # establish mysql connection
-    m_con = mysqlDB()
+    m_con = mapswipe_psqlDB()
     # sql command
     sql_query = '''
         SELECT
-          task_id,
-          project_id,
-          user_id,
-          timestamp,
-          result,
-          task_x,
-          task_y,
-          task_z
+          task_id
+         ,project_id
+         ,user_id
+         ,timestamp
+         ,info ->> 'result' as result
+         ,split_part(task_id, '-', 1) as task_x
+         ,split_part(task_id, '-', 2) as task_y
+         ,split_part(task_id, '-', 0) as task_z
         FROM
         results
         ORDER BY timestamp DESC
