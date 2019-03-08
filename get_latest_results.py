@@ -115,9 +115,9 @@ def get_results_from_mysql(count):
          ,user_id
          ,timestamp
          ,info ->> 'result' as result
-         ,split_part(task_id, '-', 1) as task_x
-         ,split_part(task_id, '-', 2) as task_y
-         ,split_part(task_id, '-', 0) as task_z
+         ,split_part(task_id, '-', 2) as task_x
+         ,split_part(task_id, '-', 3) as task_y
+         ,split_part(task_id, '-', 1) as task_z
         FROM
         results
         ORDER BY timestamp DESC
@@ -254,9 +254,10 @@ if __name__ == '__main__':
         print('###### ###### ###### ######')
 
         # this runs the script and sends an email if an error happens within the execution
-        try:
-            get_latest_results(args.count, args.outfile)
-        except BaseException:
+        #try:
+        get_latest_results(args.count, args.outfile)
+        #except BaseException:
+        '''
             tb = sys.exc_info()
             # log error
             logging.error(str(tb))
@@ -268,6 +269,7 @@ if __name__ == '__main__':
                 send_text_via_mail(msg, head)
             except:
                 pass
+        '''
 
 
         # check if the script should be looped

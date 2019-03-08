@@ -45,7 +45,7 @@ class mapswipe_psqlDB(object):
     def __init__(self):
         # try to load configuration from config file
         try:
-            with open('../cfg/config.cfg') as json_data_file:
+            with open('./cfg/config.cfg') as json_data_file:
                 data = json.load(json_data_file)
                 dbname = data['mapswipe_psql']['database']
                 user = data['mapswipe_psql']['username']
