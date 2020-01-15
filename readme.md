@@ -1,6 +1,6 @@
 # MapSwipe Analytics Live
 
-A [tool to display the most recent contributions](http://mapswipe.geog.uni-heidelberg.de/live.html) of the [MapSwipe App](http://mapswipe.org/).
+A [tool to display the most recent contributions](http://mapswipe.geog.uni-heidelberg.de/live) of the [MapSwipe App](http://mapswipe.org/).
 
 Created at [HeiGIT](http://www.geog.uni-heidelberg.de/gis/heigit_en.html) for [MapSwipeAnalytics](http://mapswipe.geog.uni-heidelberg.de/).
 
